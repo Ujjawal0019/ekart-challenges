@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechMart - Undo Redo Cart</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>TechMart</h1>
+    <p>Challenge 4: Undo / Redo Cart</p>
+  </header>
+
+  <main class="layout">
+    <section>
+      <h2>Products</h2>
+      <div id="products" class="product-grid"></div>
+    </section>
+
+    <aside class="cart">
+      <div class="cart-heading">
+        <h2>Your Cart</h2>
+        <span id="itemCount" class="badge">0 items</span>
+      </div>
+
+      <div class="actions">
+        <button id="undoBtn" disabled>↶ Undo</button>
+        <button id="redoBtn" disabled>↷ Redo</button>
+      </div>
+
+      <div id="cartItems"></div>
+
+      <div class="cart-footer">
+        <strong>Total: <span id="cartTotal">₹0</span></strong>
+      </div>
+
+      <h3>Operation History</h3>
+      <ul id="history" class="history"></ul>
+    </aside>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

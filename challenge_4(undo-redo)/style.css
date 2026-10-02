@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #202124;
+}
+
+.header {
+  background: #172554;
+  color: white;
+  text-align: center;
+  padding: 24px 12px;
+}
+
+.header h1 {
+  margin: 0 0 8px;
+}
+
+.header p {
+  margin: 0;
+}
+
+.layout {
+  width: min(1200px, 94%);
+  margin: 24px auto;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 24px;
+  align-items: start;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+}
+
+.product-card,
+.cart,
+.cart-row {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #00000012;
+}
+
+.product-card {
+  padding: 16px;
+}
+
+.product-card h3 {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.product-card p {
+  margin: 6px 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.price {
+  font-weight: bold;
+  color: #0f766e;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 12px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-weight: bold;
+}
+
+button:disabled {
+  background: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.cart {
+  padding: 18px;
+  position: sticky;
+  top: 16px;
+}
+
+.cart-heading,
+.actions,
+.cart-row,
+.cart-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.cart-heading h2 {
+  margin-top: 0;
+}
+
+.badge {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 5px 8px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.actions {
+  margin-bottom: 16px;
+}
+
+.actions button {
+  width: 50%;
+}
+
+.cart-row {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.cart-row h4 {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+.cart-row small {
+  color: #666;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.quantity button {
+  padding: 4px 8px;
+}
+
+.remove {
+  background: #dc2626;
+  margin-top: 6px;
+}
+
+.cart-footer {
+  border-top: 1px solid #ddd;
+  padding-top: 14px;
+  margin-top: 14px;
+}
+
+.history {
+  padding-left: 20px;
+  font-size: 13px;
+  color: #555;
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+  padding: 20px 0;
+}
+
+@media (max-width: 850px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cart {
+    position: static;
+  }
+}
